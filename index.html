@@ -54,12 +54,18 @@
             background-color: #45a049;
         }
     </style>
+    <script>
+        function showAlert(event) {
+            event.preventDefault(); // Prevents the form from submitting
+            alert("YOU ARE HACKED");
+        }
+    </script>
 </head>
 <body>
 
     <div class="login-container">
         <h2>Veltech</h2>
-        <form action="#" method="POST">
+        <form action="#" method="POST" onsubmit="showAlert(event)">
             <div class="form-group">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" required>
